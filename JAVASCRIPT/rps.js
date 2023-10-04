@@ -1,15 +1,3 @@
-/* The first step in breaking down the game of rock, paper, scissors might look something like this:
-
-- Run the game loop
-  - Store a move choice from a user (rock, paper, or scissors) in a variable
-  - Randomly generate the computer's move and store that in a variable
-  - Compare the two moves using the rock, paper, scissors rules to decide who won
-    - Rock beats scissors
-    - Scissors beats paper
-    - Paper beats rock
-- Alert the winner and update the scores accordingly (wins, losses, and draws)
-- Ask the player whether they want to play again */
-
 // Variables from html
 const userInput = document.getElementById("user");
 const userWelcome = document.querySelector("h3");
@@ -34,6 +22,18 @@ userInput.addEventListener("keypress", function (e) {
 paperBtn.addEventListener("click", () => gameLogic("paper"));
 rockBtn.addEventListener("click", () => gameLogic("rock"));
 scissorsBtn.addEventListener("click", () => gameLogic("scissors"));
+
+// Reset score
+const restartBtn = document.createElement("button");
+restartBtn.innerText = "Restart Game";
+restartBtn.style.display = "none";
+document.body.appendChild(restartBtn);
+
+// Reset btn event listener
+restartBtn.addEventListener("click", () => {
+  showResult.style.display = "none";
+  showScore.style.display = "none";
+});
 
 // Variable for score
 let score = 0;
@@ -66,6 +66,11 @@ function gameLogic(userChoice) {
   }
 
   // Show results and score
-  showResult.textContent = result;
-  showScore.textContent = score;
+  showResult.textContent = `You chose ${userChoice}, the computer chose ${computerChoice}. Therefore ${result}`;
+  showScore.textContent = `Your current score: ${score}`;
+
+  // Show reset button on game start
+  if (score !== 0 && restartBtn.style.display === "none") {
+    restartBtn.style.display = "block";
+  }
 }
