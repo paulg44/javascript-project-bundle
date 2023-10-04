@@ -1,0 +1,20 @@
+/* CSS file for RPS */
+
+/* Body */
+.rps-body {
+  position: relative;
+  background: url("../IMG/saw_home.jpg") no-repeat center center/cover;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+/* Main welcome section */
+.main-section {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+}
+
+.main-section h2 {
+  font-size: 80px;
+}
