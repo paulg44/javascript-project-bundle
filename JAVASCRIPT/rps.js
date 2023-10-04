@@ -11,8 +11,14 @@
 - Ask the player whether they want to play again */
 
 // Variables from html
-let userInput = document.getElementById("user");
-let userWelcome = document.querySelector("h3");
+const userInput = document.getElementById("user");
+const userWelcome = document.querySelector("h3");
+const showResult = document.querySelector(".show-result");
+const showScore = document.querySelector(".score");
+// Button Variables
+const paperBtn = document.getElementById("paper");
+const rockBtn = document.getElementById("rock");
+const scissorsBtn = document.getElementById("scissors");
 
 // Store user input in a variable
 userInput.addEventListener("keypress", function (e) {
@@ -20,6 +26,46 @@ userInput.addEventListener("keypress", function (e) {
     let inputValue = e.target.value;
 
     //   Add text content to h3
-    userWelcome.textContent = `Welcome ${inputValue}`;
+    userWelcome.textContent = `Welcome ${inputValue}, make your choice`;
   }
 });
+
+// Player button choice
+paperBtn.addEventListener("click", () => gameLogic("paper"));
+rockBtn.addEventListener("click", () => gameLogic("rock"));
+scissorsBtn.addEventListener("click", () => gameLogic("scissors"));
+
+// Variable for score
+let score = 0;
+
+// Variable for result of game
+let result;
+
+// Game Logic
+function gameLogic(userChoice) {
+  // Array of possible choice
+  let choices = ["rock", "paper", "scissors"];
+
+  // Computer picks a choice from array at random
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  console.log(computerChoice);
+
+  // check user input against computer
+  if (
+    (userChoice === "rock" && computerChoice === "scissors") ||
+    (userChoice === "paper" && computerChoice === "rock") ||
+    (userChoice === "scissors" && computerChoice === "paper")
+  ) {
+    result = `You win!`;
+    score += 1;
+  } else if (userChoice === computerChoice) {
+    result = "Tie!";
+  } else {
+    result = "Computer wins!";
+    score -= 1;
+  }
+
+  // Show results and score
+  showResult.textContent = result;
+  showScore.textContent = score;
+}
