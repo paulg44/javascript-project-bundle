@@ -14,6 +14,19 @@ paperBtn.style.visibility = "hidden";
 rockBtn.style.visibility = "hidden";
 scissorsBtn.style.visibility = "hidden";
 
+// Fade-in Function
+function fadeIn(element) {
+  let opacity = 0;
+  let interval = setInterval(function () {
+    if (opacity < 1) {
+      opacity = 1;
+      element.style.opacity = opacity;
+    } else {
+      clearInterval(interval);
+    }
+  });
+}
+
 // Store user input in a variable
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
@@ -26,6 +39,7 @@ userInput.addEventListener("keypress", function (e) {
 
     //   Add text content to h3
     userWelcome.textContent = `Hello ${inputValue}, I want to play a game`;
+    fadeIn(userWelcome, paperBtn);
   }
 });
 
@@ -81,6 +95,7 @@ function gameLogic(userChoice) {
 
   // Show results and score
   showResult.textContent = `You chose ${userChoice}, Jigsaw chose ${computerChoice}. Therefore ${result}`;
+  fadeIn(showResult);
   showScore.textContent = `Your current score: ${score}`;
 
   // Quotes dependent on score

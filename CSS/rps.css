@@ -27,3 +27,9 @@
 .enter-user {
   margin: 20px 0;
 }
+
+.welcome-user,
+.show-result {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
