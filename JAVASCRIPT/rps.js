@@ -99,8 +99,21 @@ function gameLogic(userChoice) {
   showScore.textContent = `Your current score: ${score}`;
 
   // Quotes dependent on score
-  let plusScoreQuotes = ["great", "excellent", "good"];
-  let minusScoreQuotes = ["bad", "worse", "awful"];
+  let plusScoreQuotes = [
+    "If your good at anticipating the human mind it leave's nothing to chance",
+    "It will be like finding a needle in a haystack",
+    "Most people are so ungrateful to be alive...but not you, not anymore",
+    "Don't worry, you're sound asleep and can't feel a thing",
+    "How you play the cards you're dealt is all that matters",
+  ];
+  let minusScoreQuotes = [
+    "Live or die. Make your choice",
+    "The rules of the game have been made very clear",
+    "Death is a surprise party. Unless of course, you're already dead on the inside",
+    "You're probably wondering where you are. I'll tell you where you might be. You might be in the room you die in",
+    "Once you are in hell, only the devil can help you out",
+    "I'm sick of it all",
+  ];
   // Random quote picker
   const plusQuote =
     plusScoreQuotes[Math.floor(Math.random() * plusScoreQuotes.length)];
