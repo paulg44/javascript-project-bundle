@@ -8,6 +8,10 @@ const showQuote = document.querySelector(".quote");
 const paperBtn = document.getElementById("paper");
 const rockBtn = document.getElementById("rock");
 const scissorsBtn = document.getElementById("scissors");
+// Audio Variables
+const iWantAudio = document.getElementById("want-to-play-audio");
+// Background Audio Variable to control volume
+document.getElementById("background-audio").volume = 0.2;
 
 // Hide buttons initially
 paperBtn.style.visibility = "hidden";
@@ -40,6 +44,8 @@ userInput.addEventListener("keypress", function (e) {
     //   Add text content to h3
     userWelcome.textContent = `Hello ${inputValue}, I want to play a game`;
     fadeIn(userWelcome, paperBtn);
+    // Play Audio
+    iWantAudio.play();
   }
 });
 
