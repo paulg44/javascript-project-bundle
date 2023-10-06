@@ -4,6 +4,7 @@ const userWelcome = document.querySelector("h3");
 const showResult = document.querySelector(".show-result");
 const showScore = document.querySelector(".score");
 const showQuote = document.querySelector(".quote");
+const removeAll = document.querySelector(".easy-remove-all");
 // Button Variables
 const paperBtn = document.getElementById("paper");
 const rockBtn = document.getElementById("rock");
@@ -11,6 +12,8 @@ const scissorsBtn = document.getElementById("scissors");
 // Audio Variables
 const iWantAudio = document.getElementById("want-to-play-audio");
 const helplessAudio = document.getElementById("helpless-audio");
+const hurryAudio = document.getElementById("hurry-audio");
+const haAudio = document.getElementById("ha-audio");
 // Background Audio Variable to control volume
 document.getElementById("background-audio").volume = 0;
 
@@ -63,8 +66,7 @@ document.body.appendChild(restartBtn);
 
 // Reset btn event listener
 restartBtn.addEventListener("click", () => {
-  showResult.style.display = "none";
-  showScore.style.display = "none";
+  location.reload();
 });
 
 // Variable for score
@@ -75,6 +77,10 @@ let result;
 
 // Variable for quotes
 let quote;
+
+// Set jump scare to false so can then set it to true once happened so it can only happen once
+let negativeScare = false;
+let positiveScare = false;
 
 // Game Logic
 function gameLogic(userChoice) {
@@ -143,10 +149,13 @@ function gameLogic(userChoice) {
     restartBtn.style.position = "absolute";
     restartBtn.style.bottom = "10px";
     restartBtn.style.right = "10px";
+    restartBtn.style.backgroundColor = "transparent";
+    restartBtn.style.color = "red";
+    restartBtn.style.border = "2px solid red";
   }
 
   // Mid game scare for negative score
-  if (score === -2) {
+  if (score === -2 && !negativeScare) {
     helplessAudio.play();
     document.body.style.transition = "background-image 0.3s ease";
     document.body.style.backgroundImage = 'url("../IMg/test_image.jpg")';
@@ -154,5 +163,37 @@ function gameLogic(userChoice) {
     setTimeout(function () {
       document.body.style.backgroundImage = 'url("../IMg/saw_home.jpg")';
     }, 200);
+
+    negativeScare = true;
+  }
+
+  // Mid game scare for positive score
+  if (score === 2 && !positiveScare) {
+    hurryAudio.play();
+    document.body.style.transition = "background-image 0.3s ease";
+    document.body.style.backgroundImage = 'url("../IMg/positive_score.jpg")';
+
+    setTimeout(function () {
+      document.body.style.backgroundImage = 'url("../IMg/saw_home.jpg")';
+    }, 200);
+
+    positiveScare = true;
+  }
+
+  // Game over
+  if (score === -4) {
+    haAudio.play();
+    document.body.style.transition = "background-image 0.5s ease";
+    document.body.style.backgroundImage = 'url("../IMg/saw_end.jpg")';
+    removeAll.remove();
+
+    // Create game over header
+    const gameOverHeader = document.createElement("h2");
+    gameOverHeader.textContent = "GAME OVER";
+    gameOverHeader.style.color = "black";
+    gameOverHeader.style.fontSize = "6rem";
+    gameOverHeader.style.fontFamily = "Saw-original";
+
+    document.body.appendChild(gameOverHeader);
   }
 }

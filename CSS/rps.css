@@ -9,6 +9,11 @@
   src: url("../ASSETS/shlop\ rg.otf");
 }
 
+@font-face {
+  font-family: "Saw-original";
+  src: url("../ASSETS/sawesome.ttf") format(truetype);
+}
+
 /* Body */
 .rps-body {
   position: relative;

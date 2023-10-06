@@ -8,36 +8,37 @@
     <title>Vanilla JavaScript Bundle of Projects</title>
   </head>
   <body class="rps-body">
-    <!-- Main welcome section -->
-    <section class="main-section">
-      <h2>Live or Die</h2>
-      <p class="side-header">(rock, paper, scissors)</p>
+    <section class="easy-remove-all">
+      <!-- Main welcome section -->
+      <section class="main-section">
+        <h2>Live or Die</h2>
+        <p class="side-header">(rock, paper, scissors)</p>
 
-      <!-- Username input and welcome -->
-      <div class="enter-user">
-        <label for="user" class="enter-username">What is your name?</label>
-        <input id="user" type="text" class="enter-user-input" />
-      </div>
-      <!-- Hidden welcome message -->
-      <h3 class="welcome-user"></h3>
+        <!-- Username input and welcome -->
+        <div class="enter-user">
+          <label for="user" class="enter-username">What is your name?</label>
+          <input id="user" type="text" class="enter-user-input" />
+        </div>
+        <!-- Hidden welcome message -->
+        <h3 class="welcome-user"></h3>
+      </section>
+
+      <!-- Choice buttons section-->
+      <section class="buttons-section">
+        <div class="choice-btns">
+          <button id="rock" class="rps-btn">Rock</button>
+          <button id="paper" class="rps-btn">Paper</button>
+          <button id="scissors" class="rps-btn">Scissors</button>
+        </div>
+      </section>
+
+      <!-- Show result & score -->
+      <section class="results-section">
+        <h4 class="show-result"></h4>
+        <p class="score"></p>
+        <p class="quote"></p>
+      </section>
     </section>
-
-    <!-- Choice buttons section-->
-    <section class="buttons-section">
-      <div class="choice-btns">
-        <button id="rock" class="rps-btn">Rock</button>
-        <button id="paper" class="rps-btn">Paper</button>
-        <button id="scissors" class="rps-btn">Scissors</button>
-      </div>
-    </section>
-
-    <!-- Show result & score -->
-    <section class="results-section">
-      <h4 class="show-result"></h4>
-      <p class="score"></p>
-      <p class="quote"></p>
-    </section>
-
     <!-- Background Audio -->
     <audio
       id="background-audio"
@@ -55,6 +56,8 @@
       id="helpless-audio"
       src="../ASSETS/Audio/right-now-youre-feeling-helpless.mp3"
     ></audio>
+    <audio id="hurry-audio" src="../ASSETS/Audio/better-hurry-up.mp3"></audio>
+    <audio id="ha-audio" src="../ASSETS/Audio/ha-ha-ha.mp3"></audio>
     <script src="../JAVASCRIPT/rps.js"></script>
   </body>
 </html>
