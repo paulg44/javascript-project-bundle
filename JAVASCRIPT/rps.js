@@ -14,6 +14,7 @@ const iWantAudio = document.getElementById("want-to-play-audio");
 const helplessAudio = document.getElementById("helpless-audio");
 const hurryAudio = document.getElementById("hurry-audio");
 const haAudio = document.getElementById("ha-audio");
+const congratsAudio = document.getElementById("congrats-audio");
 // Background Audio Variable to control volume
 document.getElementById("background-audio").volume = 0;
 
@@ -195,5 +196,22 @@ function gameLogic(userChoice) {
     gameOverHeader.style.fontFamily = "Saw-original";
 
     document.body.appendChild(gameOverHeader);
+  }
+
+  // Win Game
+  if (score === 4) {
+    congratsAudio.play();
+    document.body.style.transition = "background-image 0.5s ease";
+    document.body.style.backgroundImage = 'url("../IMg/saw_win.jpg")';
+    removeAll.remove();
+
+    // Create game over header
+    const winnerHeader = document.createElement("h2");
+    winnerHeader.textContent = "YOU WIN";
+    winnerHeader.style.color = "white";
+    winnerHeader.style.fontSize = "6rem";
+    winnerHeader.style.fontFamily = "Saw-original";
+
+    document.body.appendChild(winnerHeader);
   }
 }
