@@ -16,6 +16,7 @@
   text-align: center;
   color: #f5f5f5;
   font-family: "Saw", sans-serif;
+  transition: background-image 0.3s ease;
 }
 
 /* Main welcome section */

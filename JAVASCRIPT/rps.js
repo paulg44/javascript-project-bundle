@@ -10,8 +10,9 @@ const rockBtn = document.getElementById("rock");
 const scissorsBtn = document.getElementById("scissors");
 // Audio Variables
 const iWantAudio = document.getElementById("want-to-play-audio");
+const helplessAudio = document.getElementById("helpless-audio");
 // Background Audio Variable to control volume
-document.getElementById("background-audio").volume = 0.2;
+document.getElementById("background-audio").volume = 0;
 
 // Hide buttons initially
 paperBtn.style.visibility = "hidden";
@@ -142,5 +143,16 @@ function gameLogic(userChoice) {
     restartBtn.style.position = "absolute";
     restartBtn.style.bottom = "10px";
     restartBtn.style.right = "10px";
+  }
+
+  // Mid game scare for negative score
+  if (score === -2) {
+    helplessAudio.play();
+    document.body.style.transition = "background-image 0.3s ease";
+    document.body.style.backgroundImage = 'url("../IMg/test_image.jpg")';
+
+    setTimeout(function () {
+      document.body.style.backgroundImage = 'url("../IMg/saw_home.jpg")';
+    }, 200);
   }
 }
