@@ -159,10 +159,10 @@ function gameLogic(userChoice) {
   if (score === -2 && !negativeScare) {
     helplessAudio.play();
     document.body.style.transition = "background-image 0.3s ease";
-    document.body.style.backgroundImage = 'url("../IMg/test_image.jpg")';
+    document.body.style.backgroundImage = 'url("./IMg/test_image.jpg")';
 
     setTimeout(function () {
-      document.body.style.backgroundImage = 'url("../IMg/saw_home.jpg")';
+      document.body.style.backgroundImage = 'url("./IMg/saw_home.jpg")';
     }, 200);
 
     negativeScare = true;
@@ -172,10 +172,10 @@ function gameLogic(userChoice) {
   if (score === 2 && !positiveScare) {
     hurryAudio.play();
     document.body.style.transition = "background-image 0.3s ease";
-    document.body.style.backgroundImage = 'url("../IMg/positive_score.jpg")';
+    document.body.style.backgroundImage = 'url("./IMg/positive_score.jpg")';
 
     setTimeout(function () {
-      document.body.style.backgroundImage = 'url("../IMg/saw_home.jpg")';
+      document.body.style.backgroundImage = 'url("./IMg/saw_home.jpg")';
     }, 200);
 
     positiveScare = true;
@@ -185,7 +185,7 @@ function gameLogic(userChoice) {
   if (score === -4) {
     haAudio.play();
     document.body.style.transition = "background-image 0.5s ease";
-    document.body.style.backgroundImage = 'url("../IMg/saw_end.jpg")';
+    document.body.style.backgroundImage = 'url("./IMg/saw_end.jpg")';
     removeAll.remove();
 
     // Create game over header
@@ -202,7 +202,7 @@ function gameLogic(userChoice) {
   if (score === 4) {
     congratsAudio.play();
     document.body.style.transition = "background-image 0.5s ease";
-    document.body.style.backgroundImage = 'url("../IMg/saw_win.jpg")';
+    document.body.style.backgroundImage = 'url("./IMg/saw_win.jpg")';
     removeAll.remove();
 
     // Create game over header
