@@ -163,7 +163,7 @@ function gameLogic(userChoice) {
 
     setTimeout(function () {
       document.body.style.backgroundImage = 'url("./IMG/saw_home.jpg")';
-    }, 200);
+    }, 500);
 
     negativeScare = true;
   }
@@ -176,7 +176,7 @@ function gameLogic(userChoice) {
 
     setTimeout(function () {
       document.body.style.backgroundImage = 'url("./IMG/saw_home.jpg")';
-    }, 200);
+    }, 500);
 
     positiveScare = true;
   }

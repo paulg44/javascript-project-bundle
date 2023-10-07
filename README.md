@@ -12,3 +12,11 @@ Well, this was far more difficult than I anticipated. It just shows if you don't
 
 Javascript - I learned (again) about scopes within function, sometimes you cannot access the things you want as they are function scoped or globally. Also refreshed my memory about textContent, create and amending elements.
 CSS -
+
+<!-- TODO -->
+
+# Media
+
+- make game over higher
+- make sure the screen is 100vh on phones, currently cant see the the restart button
+- remove keypad once name has been entered
