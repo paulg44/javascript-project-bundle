@@ -11,12 +11,4 @@ Well, this was far more difficult than I anticipated. It just shows if you don't
 # Takeaways
 
 Javascript - I learned (again) about scopes within function, sometimes you cannot access the things you want as they are function scoped or globally. Also refreshed my memory about textContent, create and amending elements.
-CSS -
-
-<!-- TODO -->
-
-# Media
-
-- make game over higher
-- make sure the screen is 100vh on phones, currently cant see the the restart button
-- remove keypad once name has been entered
+CSS - So this has turned into a full on project like I knew it would, just can't help myself. I've very much enjoyed it, a lot of the CSS is n the JavaScript file as I've had to create elements for the jump scares and it's also been a great reminder of how to add audio into projects as I'd not done that for quite a while.

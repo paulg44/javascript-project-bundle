@@ -89,6 +89,7 @@
 /* Media queries */
 @media (max-width: 1200px) {
   .main-section {
+    height: 100vh;
     width: 80%;
     left: 50%;
     transform: translateX(-50%);
