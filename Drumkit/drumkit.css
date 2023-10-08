@@ -1,0 +1,36 @@
+/* CSS for drum kit */
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+@font-face {
+  font-family: "Metal";
+  src: url("../ASSETS/metal\ lord.otf");
+}
+
+.drumkit-body {
+  background: url("../IMG/Drumkit/diane-picchiottino-cxzefrNIuM0-unsplash.jpg")
+    no-repeat center center/cover;
+}
+
+/* Buttons */
+.drum-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drum-btns button {
+  width: 200px;
+  background-color: transparent;
+  color: var(--glow-color);
+  font-family: "Metal", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  border: 3px solid var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 40px;
+}
