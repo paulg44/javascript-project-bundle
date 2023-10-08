@@ -16,6 +16,7 @@
 .drumkit-body {
   background: url("../IMG/Drumkit/diane-picchiottino-cxzefrNIuM0-unsplash.jpg")
     no-repeat center center/cover;
+  backdrop-filter: blur(2px);
 }
 
 .drumkit-header {
@@ -57,4 +58,36 @@
 
 .drum-btns span {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .drumkit-body {
+    overflow: hidden;
+  }
+
+  .drumkit-header {
+    text-align: center;
+  }
+
+  .snare-n-hats,
+  .toms,
+  .cymbols {
+    display: flex;
+  }
+
+  .kick-n-sticks {
+    display: flex;
+    justify-content: center;
+  }
+
+  .drum-btns {
+    display: block;
+  }
+
+  .drum-btns button {
+    width: 100px;
+    font-size: 16px;
+    margin: 10px;
+    padding: 5px;
+  }
 }
