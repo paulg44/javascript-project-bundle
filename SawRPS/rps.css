@@ -1,23 +1,23 @@
 /* CSS file for RPS */
 @font-face {
   font-family: "Saw";
-  src: url("./ASSETS/Sawfont-7RVD.otf") format(truetype);
+  src: url("../ASSETS/Sawfont-7RVD.otf") format(truetype);
 }
 
 @font-face {
   font-family: "scare-btn";
-  src: url("./ASSETS/shlop\ rg.otf");
+  src: url("../ASSETS/shlop\ rg.otf");
 }
 
 @font-face {
   font-family: "Saw-original";
-  src: url("./ASSETS/sawesome.ttf") format(truetype);
+  src: url("../ASSETS/sawesome.ttf") format(truetype);
 }
 
 /* Body */
 .rps-body {
   position: relative;
-  background: url("./IMG/saw_home.jpg") no-repeat center center/cover;
+  background: url("../IMG/saw_home.jpg") no-repeat center center/cover;
   text-align: center;
   color: #f5f5f5;
   font-family: "Saw", sans-serif;

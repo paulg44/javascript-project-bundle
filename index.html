@@ -3,59 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="rps.css" />
     <link rel="stylesheet" href="utilities.css" />
-    <title>Vanilla JavaScript Bundle of Projects</title>
+    <title>Homepage</title>
   </head>
-  <body class="rps-body">
-    <section class="easy-remove-all">
-      <!-- Main welcome section -->
-      <section class="main-section">
-        <h2>Live or Die</h2>
-        <p class="side-header">(rock, paper, scissors)</p>
-
-        <!-- Username input and welcome -->
-        <div class="enter-user">
-          <label for="user" class="enter-username">What is your name?</label>
-          <input id="user" type="text" class="enter-user-input" />
-        </div>
-        <!-- Hidden welcome message -->
-        <h3 class="welcome-user"></h3>
-      </section>
-
-      <!-- Choice buttons section-->
-      <section class="buttons-section">
-        <div class="choice-btns">
-          <button id="rock" class="rps-btn">Rock</button>
-          <button id="paper" class="rps-btn">Paper</button>
-          <button id="scissors" class="rps-btn">Scissors</button>
-        </div>
-      </section>
-
-      <!-- Show result & score -->
-      <section class="results-section">
-        <h4 class="show-result"></h4>
-        <p class="score"></p>
-        <p class="quote"></p>
-      </section>
-    </section>
-    <!-- Background Audio -->
-    <audio
-      id="background-audio"
-      src="./Audio/background-_audio.mp3"
-      loop="true"
-      autoplay="true"
-    ></audio>
-
-    <!-- Audio files -->
-    <audio id="want-to-play-audio" src="./Audio/play_a_game.mp3"></audio>
-    <audio
-      id="helpless-audio"
-      src="./Audio/right-now-youre-feeling-helpless.mp3"
-    ></audio>
-    <audio id="hurry-audio" src="./Audio/better-hurry-up.mp3"></audio>
-    <audio id="ha-audio" src="./Audio/ha-ha-ha.mp3"></audio>
-    <audio id="congrats-audio" src="./Audio/congratulations.mp3"></audio>
-    <script src="rps.js"></script>
+  <body>
+    <h1 class="header">JavaScript Project Bundle</h1>
+    <div class="links">
+      <a class="sawrps-link" href="./SawRPS/index.html"
+        >Saw Horror Game (rock, paper.scissors)</a
+      >
+      <a class="drumkit-link" href="./Drumkit/">Virtual Drum Kit</a>
+    </div>
   </body>
 </html>
