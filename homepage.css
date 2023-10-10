@@ -8,7 +8,8 @@
 
 /* Individual projects */
 .project {
-  width: 300px;
+  width: 250px;
+  height: 300px;
   text-align: center;
   border: 2px solid red;
   padding: 20px;
@@ -16,4 +17,9 @@
 
 .project-img {
   width: 50%;
+}
+
+.saw-project {
+  background: url("IMG/saw_win.jpg") no-repeat center;
+  color: var(--white);
 }
