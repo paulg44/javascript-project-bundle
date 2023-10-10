@@ -21,3 +21,16 @@ button {
   border: none;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+.home-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
