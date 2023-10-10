@@ -1,0 +1,19 @@
+/* CSS for Homepage */
+/* All projects */
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+/* Individual projects */
+.project {
+  width: 300px;
+  text-align: center;
+  border: 2px solid red;
+  padding: 20px;
+}
+
+.project-img {
+  width: 50%;
+}
