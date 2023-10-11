@@ -19,7 +19,14 @@
   width: 50%;
 }
 
+/* Saw Project */
 .saw-project {
-  background: url("IMG/saw_win.jpg") no-repeat center;
+  background: url("IMG/saw_win.jpg") no-repeat center center/cover;
+  color: var(--white);
+}
+
+/* Drum Kit Project */
+.drumkit-project {
+  background: url("IMG/drum_kit_img.jpg") no-repeat center center/cover;
   color: var(--white);
 }
