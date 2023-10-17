@@ -9,6 +9,34 @@
   </head>
   <body>
     <h2>Quiz App</h2>
+
+    <!-- Quiz options to generate -->
+    <div class="generate-quiz">
+      <!-- Categories -->
+      <div class="category">
+        <label for="categories">Select Category</label>
+        <select name="categories" id="categories">
+          <option value="sports">Sports</option>
+          <option value="general">General Knowledge</option>
+          <option value="film">Film</option>
+          <option value="music">Music</option>
+          <option value="science">Science & Nature</option>
+        </select>
+      </div>
+
+      <!-- Difficulty -->
+      <div class="difficulty">
+        <label for="difficulty">Difficulty</label>
+        <select name="difficulty" id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <!-- Button to generate Quiz -->
+      <button class="generate">Generate Quiz</button>
+    </div>
     <script src="quizApp.js"></script>
   </body>
 </html>
