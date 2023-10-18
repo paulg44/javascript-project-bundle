@@ -7,12 +7,13 @@
 // Variable from HTML
 const generateBtn = document.querySelector(".generate");
 const question = document.querySelector(".question");
-const options = document.querySelector(".options");
 const answerOne = document.querySelector(".answer-one");
 const answerTwo = document.querySelector(".answer-two");
 const answerThree = document.querySelector(".answer-three");
 const answerFour = document.querySelector(".answer-four");
 const nextBtn = document.querySelector(".next");
+const scoreDisplay = document.querySelector(".score");
+const testBtn = document.querySelector(".test-answer");
 
 // API for quiz
 async function generateQuiz() {
@@ -22,22 +23,35 @@ async function generateQuiz() {
   const data = await response.json();
   return data;
 }
+
 // Array that has all answers in
 let allAnswersArray = [];
+// Variable for correct answer
+let correctAnswer;
+// Empty score array
+let score = 0;
 
-// Generate quiz data on button click
+// Function that generates quiz data on button click
 generateBtn.addEventListener("click", async () => {
   const quizData = await generateQuiz();
   console.log(quizData);
+
   question.textContent = quizData.results[0].question;
 
+  addQuestionsToLabels(quizData);
+
+  correctAnswer = quizData.results[0].correct_answer;
+  console.log(correctAnswer);
+});
+
+// Function to add questions to labels
+function addQuestionsToLabels(quizData) {
   // Combine all answers
   allAnswersArray = [
     ...quizData.results[0].incorrect_answers,
     quizData.results[0].correct_answer,
   ];
 
-  options.textContent = allAnswersArray;
   // This shuffles the answers randomly
   allAnswersArray.sort(() => Math.random() - 0.5);
 
@@ -46,4 +60,34 @@ generateBtn.addEventListener("click", async () => {
   answerTwo.textContent = allAnswersArray.pop();
   answerThree.textContent = allAnswersArray.pop();
   answerFour.textContent = allAnswersArray.pop();
+}
+
+// Function to find out if answer selected is correct
+testBtn.addEventListener("click", () => {
+  console.log("test btn clicked");
+  const selectedAnswer = getSelectedAnswer();
+  console.log(selectedAnswer);
+
+  if (selectedAnswer === correctAnswer) {
+    console.log("This is the correct answer");
+    score += 1;
+  } else {
+    console.log("Wrong!!!");
+  }
+
+  scoreDisplay.textContent = score;
 });
+
+// Function to get selected answer
+function getSelectedAnswer() {
+  const checkboxes = document.querySelectorAll(".answer-checkbox");
+
+  for (const checkbox of checkboxes) {
+    if (checkbox.checked) {
+      const label = document.querySelector(`[for="${checkbox.id}"]`);
+      return label.textContent;
+    }
+  }
+
+  return null;
+}
