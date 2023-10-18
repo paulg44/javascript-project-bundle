@@ -13,7 +13,6 @@ const answerThree = document.querySelector(".answer-three");
 const answerFour = document.querySelector(".answer-four");
 const nextBtn = document.querySelector(".next");
 const scoreDisplay = document.querySelector(".score");
-const testBtn = document.querySelector(".test-answer");
 
 // API for quiz
 async function generateQuiz() {
@@ -63,7 +62,7 @@ function addQuestionsToLabels(quizData) {
 }
 
 // Function to find out if answer selected is correct
-testBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
   console.log("test btn clicked");
   const selectedAnswer = getSelectedAnswer();
   console.log(selectedAnswer);
@@ -90,4 +89,15 @@ function getSelectedAnswer() {
   }
 
   return null;
+}
+
+// Function to reset checkboxes and go to next question
+function goToNextQuestion() {
+  // Reset Checkboxes
+  answerOne.checked = false;
+  answerTwo.checked = false;
+  answerThree.checked = false;
+  answerFour.checked = false;
+
+  // Update question
 }
