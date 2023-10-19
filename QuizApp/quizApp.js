@@ -62,10 +62,12 @@ generateBtn.addEventListener("click", async () => {
 
 // Function to add questions to labels
 function addQuestionsToLabels(quizData) {
+  const currentQuestion = quizData.results[currentQuestionIndex];
+
   // Combine all answers
   allAnswersArray = [
-    ...quizData.results[0].incorrect_answers,
-    quizData.results[0].correct_answer,
+    ...currentQuestion.incorrect_answers,
+    currentQuestion.correct_answer,
   ];
 
   // This shuffles the answers randomly
