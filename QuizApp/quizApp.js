@@ -29,18 +29,35 @@ let allAnswersArray = [];
 let correctAnswer;
 // Empty score array
 let score = 0;
+// quizData to use throughout
+let quizData;
+// Variable for nex question
+let currentQuestionIndex = 0;
 
 // Function that generates quiz data on button click
 generateBtn.addEventListener("click", async () => {
-  const quizData = await generateQuiz();
+  quizData = await generateQuiz();
   console.log(quizData);
 
-  question.textContent = quizData.results[0].question;
+  //   currentQuestionIndex = 0;
 
-  addQuestionsToLabels(quizData);
+  //   question.textContent = quizData.results[currentQuestionIndex].question;
 
-  correctAnswer = quizData.results[0].correct_answer;
-  console.log(correctAnswer);
+  //   addQuestionsToLabels(quizData);
+
+  //   correctAnswer = quizData.results[0].correct_answer;
+  //   console.log(correctAnswer);
+  if (quizData.results.length > 0) {
+    // Check if there are any questions
+    currentQuestionIndex = 0; // Reset currentQuestionIndex
+    question.textContent = quizData.results[currentQuestionIndex].question;
+    addQuestionsToLabels(quizData);
+
+    correctAnswer = quizData.results[currentQuestionIndex].correct_answer;
+    console.log(correctAnswer);
+  } else {
+    question.textContent = "No questions available.";
+  }
 });
 
 // Function to add questions to labels
@@ -61,22 +78,6 @@ function addQuestionsToLabels(quizData) {
   answerFour.textContent = allAnswersArray.pop();
 }
 
-// Function to find out if answer selected is correct
-nextBtn.addEventListener("click", () => {
-  console.log("test btn clicked");
-  const selectedAnswer = getSelectedAnswer();
-  console.log(selectedAnswer);
-
-  if (selectedAnswer === correctAnswer) {
-    console.log("This is the correct answer");
-    score += 1;
-  } else {
-    console.log("Wrong!!!");
-  }
-
-  scoreDisplay.textContent = score;
-});
-
 // Function to get selected answer
 function getSelectedAnswer() {
   const checkboxes = document.querySelectorAll(".answer-checkbox");
@@ -92,7 +93,7 @@ function getSelectedAnswer() {
 }
 
 // Function to reset checkboxes and go to next question
-function goToNextQuestion() {
+function goToNextQuestion(quizData) {
   // Reset Checkboxes
   answerOne.checked = false;
   answerTwo.checked = false;
@@ -100,4 +101,34 @@ function goToNextQuestion() {
   answerFour.checked = false;
 
   // Update question
+  currentQuestionIndex++;
+
+  // Check if there are more questions
+  if (currentQuestionIndex < quizData.results.length) {
+    question.textContent = quizData.results[currentQuestionIndex].question;
+    addQuestionsToLabels(quizData);
+
+    correctAnswer = quizData.results[currentQuestionIndex].correct_answer;
+    console.log(correctAnswer);
+  } else {
+    // If there are no more questions, display a message or handle it as needed
+    question.textContent = "Your score:";
+  }
 }
+
+// Function to find out if answer selected is correct
+nextBtn.addEventListener("click", () => {
+  console.log("test btn clicked");
+  const selectedAnswer = getSelectedAnswer();
+  console.log(selectedAnswer);
+
+  if (selectedAnswer === correctAnswer) {
+    console.log("This is the correct answer");
+    score += 1;
+  } else {
+    console.log("Wrong!!!");
+  }
+
+  scoreDisplay.textContent = score;
+  goToNextQuestion(quizData);
+});
