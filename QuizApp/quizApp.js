@@ -41,6 +41,12 @@ generateBtn.addEventListener("click", async () => {
   quizData = await generateQuiz();
   console.log(quizData);
 
+  //   Reset score and hide
+  score = 0;
+  scoreDisplay.style.display = "none";
+  nextBtn.style.display = "block";
+  allCheckboxes.style.display = "block";
+
   if (quizData.results.length > 0) {
     // Check if there are any questions
     currentQuestionIndex = 0; // Reset currentQuestionIndex
@@ -109,6 +115,7 @@ function goToNextQuestion(quizData) {
   } else {
     // If there are no more questions, run this code to hide checkboxes, next button and display score
     question.textContent = "Your score:";
+    scoreDisplay.style.display = "block";
     scoreDisplay.textContent = score;
     nextBtn.style.display = "none";
     allCheckboxes.style.display = "none";
