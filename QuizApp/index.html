@@ -7,31 +7,52 @@
     <link rel="stylesheet" href="quizApp.css" />
     <title>Quiz App</title>
   </head>
-  <body>
-    <h2>Sports Quiz App</h2>
+  <body class="quiz-app-body">
+    <div class="header-container">
+      <h2>Sports Quiz App</h2>
 
       <!-- Button to generate Quiz -->
-      <button class="generate">Generate Quiz</button>
+      <button class="generate"></button>
     </div>
 
     <!-- Quiz questions -->
     <div class="questions-container">
-        <h3 class="question"></h3>
+      <h3 class="question"></h3>
 
-        <!-- Checkboxes -->
-        <div class="checkboxes">
-            <input type="checkbox" id="answer1" class="answer-checkbox" name="answer1">
-            <label class="answer-one" for="answer1"></label>
-            <input type="checkbox" id="answer2" class="answer-checkbox" name="answer2">
-            <label class="answer-two" for="answer2"></label>
-            <input type="checkbox" id="answer3" class="answer-checkbox" name="answer3">
-            <label class="answer-three" for="answer3"></label>
-            <input type="checkbox" id="answer4" class="answer-checkbox" name="answer4">
-            <label class="answer-four" for="answer4"></label>
-        </div>
+      <!-- Checkboxes -->
+      <div class="checkboxes">
+        <input
+          type="checkbox"
+          id="answer1"
+          class="answer-checkbox"
+          name="answer1"
+        />
+        <label class="answer-one" for="answer1"></label>
+        <input
+          type="checkbox"
+          id="answer2"
+          class="answer-checkbox"
+          name="answer2"
+        />
+        <label class="answer-two" for="answer2"></label>
+        <input
+          type="checkbox"
+          id="answer3"
+          class="answer-checkbox"
+          name="answer3"
+        />
+        <label class="answer-three" for="answer3"></label>
+        <input
+          type="checkbox"
+          id="answer4"
+          class="answer-checkbox"
+          name="answer4"
+        />
+        <label class="answer-four" for="answer4"></label>
+      </div>
 
-        <!-- Next Button -->
-        <button class="next">Next Question</button>
+      <!-- Next Button -->
+      <button class="next">Next Question</button>
     </div>
 
     <!-- Score -->

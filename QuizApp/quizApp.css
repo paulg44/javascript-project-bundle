@@ -1,1 +1,39 @@
 /* CSS file for quiz app */
+.quiz-app-body {
+  background: radial-gradient(#fff, #86bbd8);
+}
+
+/* Header */
+.header-container {
+  position: absolute;
+  top: 25%;
+  display: flex;
+}
+
+/* Generate Quiz Button */
+.generate {
+  position: relative;
+  background-color: #ef4d2f;
+  /* color: var(--white); */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-wrap: nowrap;
+  margin: 40px;
+}
+
+.generate::before {
+  content: "?";
+  position: absolute;
+  bottom: -125%;
+  left: -128%;
+  font-size: 20rem;
+  color: #ef4d2f;
+}
+
+.generate::after {
+  content: "Generate Quiz";
+  position: absolute;
+  top: 34%;
+  left: -40%;
+}

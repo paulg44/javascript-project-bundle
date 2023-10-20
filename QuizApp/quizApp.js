@@ -36,6 +36,10 @@ let quizData;
 // Variable for nex question
 let currentQuestionIndex = 0;
 
+// Hide checkboxes and next button on page load
+nextBtn.style.display = "none";
+allCheckboxes.style.display = "none";
+
 // Function that generates quiz data on button click
 generateBtn.addEventListener("click", async () => {
   quizData = await generateQuiz();
