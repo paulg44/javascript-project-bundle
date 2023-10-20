@@ -14,7 +14,7 @@
 .generate {
   position: relative;
   background-color: #ef4d2f;
-  /* color: var(--white); */
+  font-family: "Playpen Sans", cursive;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -24,6 +24,7 @@
 
 .generate::before {
   content: "?";
+  font-family: "Young Serif", sans-serif;
   position: absolute;
   bottom: -125%;
   left: -128%;
@@ -33,6 +34,7 @@
 
 .generate::after {
   content: "Generate Quiz";
+  font-weight: 800;
   position: absolute;
   top: 34%;
   left: -40%;
