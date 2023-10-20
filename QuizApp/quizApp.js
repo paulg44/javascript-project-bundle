@@ -3,6 +3,7 @@
 // Parse wrong answers and correct answer and add into an array of all answers
 // Turn array answers into checkbox for each answer
 // Assign each checkbox an answer and mix answer using Math random?
+// Hide score until final question has been answered
 
 // Variable from HTML
 const generateBtn = document.querySelector(".generate");
@@ -11,6 +12,7 @@ const answerOne = document.querySelector(".answer-one");
 const answerTwo = document.querySelector(".answer-two");
 const answerThree = document.querySelector(".answer-three");
 const answerFour = document.querySelector(".answer-four");
+const allCheckboxes = document.querySelector(".checkboxes");
 const nextBtn = document.querySelector(".next");
 const scoreDisplay = document.querySelector(".score");
 
@@ -39,14 +41,6 @@ generateBtn.addEventListener("click", async () => {
   quizData = await generateQuiz();
   console.log(quizData);
 
-  //   currentQuestionIndex = 0;
-
-  //   question.textContent = quizData.results[currentQuestionIndex].question;
-
-  //   addQuestionsToLabels(quizData);
-
-  //   correctAnswer = quizData.results[0].correct_answer;
-  //   console.log(correctAnswer);
   if (quizData.results.length > 0) {
     // Check if there are any questions
     currentQuestionIndex = 0; // Reset currentQuestionIndex
@@ -113,8 +107,11 @@ function goToNextQuestion(quizData) {
     correctAnswer = quizData.results[currentQuestionIndex].correct_answer;
     console.log(correctAnswer);
   } else {
-    // If there are no more questions, display a message or handle it as needed
+    // If there are no more questions, run this code to hide checkboxes, next button and display score
     question.textContent = "Your score:";
+    scoreDisplay.textContent = score;
+    nextBtn.style.display = "none";
+    allCheckboxes.style.display = "none";
   }
 }
 
@@ -131,6 +128,5 @@ nextBtn.addEventListener("click", () => {
     console.log("Wrong!!!");
   }
 
-  scoreDisplay.textContent = score;
   goToNextQuestion(quizData);
 });
