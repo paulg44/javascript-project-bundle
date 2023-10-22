@@ -42,11 +42,20 @@
 
 /* Questions Container */
 .questions-container {
-  margin-top: 50px;
+  margin-top: 150px;
+  width: 600px;
 }
 
 /* Checkboxes */
 .checkboxes {
   display: flex;
   flex-direction: column;
+  margin: 30px 0;
+}
+
+/* Next Button */
+.next {
+  background-color: #ef4d2f;
+  color: var(--white);
+  width: 200px;
 }

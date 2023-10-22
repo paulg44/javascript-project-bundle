@@ -132,12 +132,12 @@ nextBtn.addEventListener("click", () => {
   const selectedAnswer = getSelectedAnswer();
   console.log(selectedAnswer);
 
+  goToNextQuestion(quizData);
+
   if (selectedAnswer === correctAnswer) {
     console.log("This is the correct answer");
     score += 1;
   } else {
     console.log("Wrong!!!");
   }
-
-  goToNextQuestion(quizData);
 });
