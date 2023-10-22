@@ -39,3 +39,14 @@
   top: 34%;
   left: -40%;
 }
+
+/* Questions Container */
+.questions-container {
+  margin-top: 50px;
+}
+
+/* Checkboxes */
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+}
