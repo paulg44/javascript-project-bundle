@@ -30,3 +30,9 @@
   background: url("IMG/drum_kit_img.jpg") no-repeat center center/cover;
   color: var(--white);
 }
+
+/* Quiz App Project */
+.quiz-app-project {
+  background: url("IMG/QuizApp/vecteezy_question-point-symbol-vector-image-in-a-cartoon-style-help_7162571.jpg")
+    no-repeat center center/cover;
+}
