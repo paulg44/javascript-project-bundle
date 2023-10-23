@@ -67,3 +67,16 @@ input[type="checkbox"]:checked {
   color: var(--white);
   width: 200px;
 }
+
+.score {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #ef4d2f;
+  text-shadow: 0 0 10px var(--black);
+}
+
+@media (max-width: 1200px) {
+  .questions-container {
+    width: 80vw;
+  }
+}
