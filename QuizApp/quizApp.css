@@ -53,6 +53,14 @@
   margin: 30px 0;
 }
 
+.answer {
+  margin: 10px 0;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #ef4d2f;
+}
+
 /* Next Button */
 .next {
   background-color: #ef4d2f;

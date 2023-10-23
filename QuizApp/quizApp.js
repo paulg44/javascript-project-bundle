@@ -58,7 +58,7 @@ generateBtn.addEventListener("click", async () => {
     addQuestionsToLabels(quizData);
 
     correctAnswer = quizData.results[currentQuestionIndex].correct_answer;
-    console.log(correctAnswer);
+    console.log(`correct answer:${correctAnswer}`);
   } else {
     question.textContent = "No questions available.";
   }
@@ -125,14 +125,11 @@ function goToNextQuestion(quizData) {
     allCheckboxes.style.display = "none";
   }
 }
-
 // Function to find out if answer selected is correct
 nextBtn.addEventListener("click", () => {
-  console.log("test btn clicked");
   const selectedAnswer = getSelectedAnswer();
-  console.log(selectedAnswer);
-
-  goToNextQuestion(quizData);
+  console.log(`users answer:${selectedAnswer}`);
+  console.log(`on event correct answer:${correctAnswer}`);
 
   if (selectedAnswer === correctAnswer) {
     console.log("This is the correct answer");
@@ -140,4 +137,7 @@ nextBtn.addEventListener("click", () => {
   } else {
     console.log("Wrong!!!");
   }
+
+  scoreDisplay.textContent = score;
+  goToNextQuestion(quizData);
 });
