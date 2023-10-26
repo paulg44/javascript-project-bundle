@@ -8,6 +8,7 @@
 
 /* Individual projects */
 .project {
+  position: relative;
   width: 250px;
   height: 300px;
   text-align: center;
@@ -23,6 +24,14 @@
 .saw-project {
   background: url("IMG/saw_win.jpg") no-repeat center center/cover;
   color: var(--white);
+}
+
+/* Link */
+.project-link {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Drum Kit Project */
