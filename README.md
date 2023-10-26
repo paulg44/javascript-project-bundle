@@ -11,4 +11,4 @@ Well, this was far more difficult than I anticipated. It just shows if you don't
 # Takeaways
 
 Javascript - I learned (again) about scopes within function, sometimes you cannot access the things you want as they are function scoped or globally. Also refreshed my memory about textContent, create and amending elements.
-CSS - So this has turned into a full on project like I knew it would, just can't help myself. I've very much enjoyed it, a lot of the CSS is n the JavaScript file as I've had to create elements for the jump scares and it's also been a great reminder of how to add audio into projects as I'd not done that for quite a while.
+CSS - So this has turned into a full on project like I knew it would, just can't help myself. I've very much enjoyed it, a lot of the CSS is n the JavaScript file as I've had to create elements for the jump scares and it's also been a great reminder of how to add audio into projects as I'd not done that for quite a while. I think I ended up focusing mainly on the UI/UX of this game, where the jump scares would happen for example. I really enjoyed this and wold like to do more in the future.
