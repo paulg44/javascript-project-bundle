@@ -39,3 +39,17 @@ addBtn.addEventListener("click", () => {
 });
 
 // Convert calc from string to Numbers
+// function convertString() {
+//   return eval(calc);
+// }
+
+equalsBtn.addEventListener("click", () => {
+  console.log("equals btn clicked");
+  let result;
+  try {
+    result = eval(calc);
+    displayCalc.textContent = result;
+  } catch (error) {
+    displayCalc.textContent = "Error";
+  }
+});

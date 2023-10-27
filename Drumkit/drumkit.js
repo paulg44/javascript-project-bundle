@@ -1,4 +1,4 @@
-// A more concise way to write the code fromm the bottom of the page, using less code and utilising the forEach method
+// A more concise way to write the code from the bottom of the page, using less code and utilising the forEach method
 const drumData = [
   { audio: "snare", btnClass: ".snare", key: "s" },
   { audio: "hi-hat-open", btnClass: ".hi-hat-open", key: "h" },
