@@ -14,6 +14,7 @@ const digitOne = document.querySelector(".btn-one");
 const digitTwo = document.querySelector(".btn-two");
 const addBtn = document.querySelector(".btn-add");
 const equalsBtn = document.querySelector(".btn-equals");
+const clearBtn = document.querySelector(".btn-clear");
 
 const displayCalc = document.querySelector(".display-calc");
 
@@ -38,18 +39,22 @@ addBtn.addEventListener("click", () => {
   displayCalc.textContent = calc;
 });
 
-// Convert calc from string to Numbers
-// function convertString() {
-//   return eval(calc);
-// }
-
+// Do the calculation
 equalsBtn.addEventListener("click", () => {
   console.log("equals btn clicked");
   let result;
   try {
+    // Using the eval built in function to calculate what the user has inputted into the calc variable
     result = eval(calc);
     displayCalc.textContent = result;
   } catch (error) {
     displayCalc.textContent = "Error";
   }
+});
+
+// Clear
+clearBtn.addEventListener("click", () => {
+  console.log("clear btn clicked");
+  calc = "";
+  displayCalc.textContent = "";
 });
