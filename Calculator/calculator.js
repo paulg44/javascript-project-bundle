@@ -12,8 +12,22 @@
 // Digits
 const digitOne = document.querySelector(".btn-one");
 const digitTwo = document.querySelector(".btn-two");
+const digitThree = document.querySelector(".btn-three");
+const digitFour = document.querySelector(".btn-four");
+const digitFive = document.querySelector(".btn-five");
+const digitSix = document.querySelector(".btn-six");
+const digitSeven = document.querySelector(".btn-seven");
+const digitEight = document.querySelector(".btn-eight");
+const digitNine = document.querySelector(".btn-nine");
+const digitZero = document.querySelector(".btn-zero");
+const fullStop = document.querySelector(".btn-dot");
+// Calc Symbols
 const addBtn = document.querySelector(".btn-add");
+const subtractBtn = document.querySelector(".btn-sub");
+const divideBtn = document.querySelector(".btn-div");
+const multiplyBtn = document.querySelector(".btn-mult");
 const equalsBtn = document.querySelector(".btn-equals");
+// Buttons
 const clearBtn = document.querySelector(".btn-clear");
 
 const displayCalc = document.querySelector(".display-calc");
