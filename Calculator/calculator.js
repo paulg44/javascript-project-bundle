@@ -35,6 +35,7 @@ const displayCalc = document.querySelector(".display-calc");
 // Store btn clicks to a variable
 let calc = "";
 
+// Event listeners for digits
 digitOne.addEventListener("click", () => {
   console.log("digit 1 pushed");
   calc = calc + 1;
@@ -46,10 +47,71 @@ digitTwo.addEventListener("click", () => {
   calc = calc + 2;
   displayCalc.textContent = calc;
 });
+digitThree.addEventListener("click", () => {
+  console.log("digit 3 pushed");
+  calc = calc + 3;
+  displayCalc.textContent = calc;
+});
+digitFour.addEventListener("click", () => {
+  console.log("digit 4 pushed");
+  calc = calc + 4;
+  displayCalc.textContent = calc;
+});
+digitFive.addEventListener("click", () => {
+  console.log("digit 5 pushed");
+  calc = calc + 5;
+  displayCalc.textContent = calc;
+});
+digitSix.addEventListener("click", () => {
+  console.log("digit 6 pushed");
+  calc = calc + 6;
+  displayCalc.textContent = calc;
+});
+digitSeven.addEventListener("click", () => {
+  console.log("digit 7 pushed");
+  calc = calc + 7;
+  displayCalc.textContent = calc;
+});
+digitEight.addEventListener("click", () => {
+  console.log("digit 8 pushed");
+  calc = calc + 8;
+  displayCalc.textContent = calc;
+});
+digitNine.addEventListener("click", () => {
+  console.log("digit 9 pushed");
+  calc = calc + 9;
+  displayCalc.textContent = calc;
+});
+digitZero.addEventListener("click", () => {
+  console.log("digit 0 pushed");
+  calc = calc + 0;
+  displayCalc.textContent = calc;
+});
+fullStop.addEventListener("click", () => {
+  console.log("dot pushed");
+  calc = calc + ".";
+  displayCalc.textContent = calc;
+});
 
+// Event Listeners for calc symbols
 addBtn.addEventListener("click", () => {
   console.log("add pushed");
   calc = calc + "+";
+  displayCalc.textContent = calc;
+});
+subtractBtn.addEventListener("click", () => {
+  console.log("subtract pushed");
+  calc = calc + "-";
+  displayCalc.textContent = calc;
+});
+divideBtn.addEventListener("click", () => {
+  console.log("divide pushed");
+  calc = calc + "/";
+  displayCalc.textContent = calc;
+});
+multiplyBtn.addEventListener("click", () => {
+  console.log("multiply pushed");
+  calc = calc + "*";
   displayCalc.textContent = calc;
 });
 
