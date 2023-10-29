@@ -35,6 +35,10 @@
   font-size: 80px;
 }
 
+.main-section h2 span {
+  color: red;
+}
+
 .enter-user {
   margin: 20px 0;
 }
@@ -73,6 +77,11 @@
 
 .show-result {
   margin: 20px 0;
+  font-size: 20px;
+}
+
+.score {
+  font-size: 18px;
 }
 
 .quote {
