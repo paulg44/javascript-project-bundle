@@ -20,6 +20,7 @@ const clearBtn = document.querySelector(".btn-clear");
 const deleteBtn = document.querySelector(".btn-del");
 
 let calc = "";
+displayCalc.textContent = 0;
 
 // Event Listener for all buttons and using the inner button text to add the correct digit or calc to display
 buttons.forEach((button) => {
@@ -48,7 +49,7 @@ equalsBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   console.log("clear btn clicked");
   calc = "";
-  displayCalc.textContent = "";
+  displayCalc.textContent = 0;
 });
 
 // Delete
