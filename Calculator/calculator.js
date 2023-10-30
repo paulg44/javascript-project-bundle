@@ -26,6 +26,9 @@ const addBtn = document.querySelector(".btn-add");
 const subtractBtn = document.querySelector(".btn-sub");
 const divideBtn = document.querySelector(".btn-div");
 const multiplyBtn = document.querySelector(".btn-mult");
+const percentBtn = document.querySelector(".btn-percent");
+const leftBracketBtn = document.querySelector(".btn-bracket-l");
+const rightBracketBtn = document.querySelector(".btn-bracket-r");
 const equalsBtn = document.querySelector(".btn-equals");
 // Buttons
 const clearBtn = document.querySelector(".btn-clear");
@@ -112,6 +115,21 @@ divideBtn.addEventListener("click", () => {
 multiplyBtn.addEventListener("click", () => {
   console.log("multiply pushed");
   calc = calc + "*";
+  displayCalc.textContent = calc;
+});
+percentBtn.addEventListener("click", () => {
+  console.log("percent pushed");
+  calc = calc + "%";
+  displayCalc.textContent = calc;
+});
+leftBracketBtn.addEventListener("click", () => {
+  console.log("left bracket pushed");
+  calc = calc + "(";
+  displayCalc.textContent = calc;
+});
+rightBracketBtn.addEventListener("click", () => {
+  console.log("right bracket pushed");
+  calc = calc + ")";
   displayCalc.textContent = calc;
 });
 
