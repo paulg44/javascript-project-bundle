@@ -32,6 +32,7 @@ const rightBracketBtn = document.querySelector(".btn-bracket-r");
 const equalsBtn = document.querySelector(".btn-equals");
 // Buttons
 const clearBtn = document.querySelector(".btn-clear");
+const deleteBtn = document.querySelector(".btn-del");
 
 const displayCalc = document.querySelector(".display-calc");
 
@@ -151,4 +152,11 @@ clearBtn.addEventListener("click", () => {
   console.log("clear btn clicked");
   calc = "";
   displayCalc.textContent = "";
+});
+
+// Delete
+deleteBtn.addEventListener("click", () => {
+  console.log("delete btn clicked");
+  calc = calc.slice(1);
+  displayCalc.textContent = calc;
 });
