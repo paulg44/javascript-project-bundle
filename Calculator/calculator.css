@@ -37,6 +37,18 @@
   margin-top: 40px;
 }
 
+.btn {
+  background-color: #f4f4f4;
+  position: relative;
+  border-radius: 0%;
+  /* transition: all 1s ease-in-out; */
+}
+
+.btn:active {
+  /* transform: translateX(3px); */
+  transform: translateY(3px);
+}
+
 /* Numbers */
 .numbers-container {
   display: grid;
