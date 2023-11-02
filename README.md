@@ -26,3 +26,11 @@ This was quite a simple process, it cemented my knowledge of using audio files b
 I definitely had some issues with this project. Getting the API running and working was all fine getting one question and the corresponding answers was fairly easy, however. I decided to have each question on its own separate page and thats when I ran into issues. Mainly having the question and answers corresponding correctly. It still has a few bugs to iron out and don't judge me on the UI/UX or CSS on this one. It was a lot of JavaScript so I kept the design to a minimum.
 
 # Takeaways
+
+## Calculator
+
+This was a fun little project and not as daunting as I first thought, as soon as I discovered the eval function it was pretty straight forward. I tried to make the CSS look 3D, and it's something I could possibly do and come back to, however I'm trying not to spend too much time on crazy stuff unless it really grabs me. And this project is mainly about the JavaScript.
+
+# Takeaways
+
+I've learned even more about the forEach method and the fact you can bring all buttons in at the same time so so much writing code which is great. I managed to make some pretty cool buttons look like they are being pressed when active. There's so much you can do with box shadows.
