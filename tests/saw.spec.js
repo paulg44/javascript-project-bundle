@@ -30,3 +30,16 @@ test("user inputs name", async ({ page }) => {
   expect(paperBtn).toBeVisible;
   expect(scissorsBtn).toBeVisible;
 });
+
+// Test game works
+test("game choice button", async ({ page }) => {
+  const userInput = page.getByRole("textbox", { name: "What is your name?" });
+  const rockBtn = page.getByRole("button", { name: "Rock" });
+  const resultSection = page.locator('[class="results-section"]');
+
+  await userInput.fill("Paul");
+  await page.keyboard.press("Enter");
+  await rockBtn.click();
+
+  expect(resultSection).toBeVisible();
+});
