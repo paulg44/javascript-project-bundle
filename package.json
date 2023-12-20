@@ -4,5 +4,9 @@
     "@types/node": "^20.8.9",
     "jest": "^29.7.0"
   },
-  "scripts": {}
+  "type": "module",
+  "scripts": {
+    
+    "test": "jest"
+  }
 }
