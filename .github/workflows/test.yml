@@ -20,17 +20,17 @@ jobs:
       - name: Run Tests
         run: npm test githubActions
 
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    if: success()
+  # deploy:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   if: success()
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+  #     - name: Install dependencies
+  #       run: npm install
 
-      - name: Build and deploy
-        run: npm run build
+  #     - name: Build and deploy
+  #       run: npm run build
