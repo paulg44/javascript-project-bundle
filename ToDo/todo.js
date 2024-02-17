@@ -1,13 +1,14 @@
 const input = document.getElementById("todo");
 const submitBtn = document.querySelector(".submit-btn");
+const list = document.querySelector(".todo-list");
 
-// Get input value
-input.addEventListener("keypress", (e) => {
-  let value = e.target.value;
-  console.log(value);
-});
-
-// Button submit
+// Add Task
 submitBtn.addEventListener("click", () => {
-  console.log("btn clicked");
+  const inputValue = input.value.trim();
+  if (inputValue !== "") {
+    let listItem = document.createElement("li");
+    listItem.textContent = inputValue;
+    list.appendChild(listItem);
+  }
+  input.value = "";
 });
