@@ -1,0 +1,41 @@
+/* CSS file */
+
+label {
+}
+
+input {
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+  box-shadow: 2px 3px 6px solid rgba(0, 0, 0, 0.8);
+}
+
+.submit-btn {
+  background-color: plum;
+  transition: color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: purple;
+  color: white;
+}
+
+.submit-btn:active {
+  transform: scale(0.9);
+}
+
+/* List */
+ul {
+  list-style: none;
+  /* padding: 10px; */
+  background-color: antiquewhite;
+}
+
+ul li {
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

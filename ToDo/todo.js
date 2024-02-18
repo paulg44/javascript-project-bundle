@@ -10,9 +10,13 @@ function addToList() {
     listItem.textContent = inputValue;
     list.appendChild(listItem);
     let deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = "X";
     deleteBtn.addEventListener("click", deleteFromList);
     listItem.appendChild(deleteBtn);
+    // Btn Style
+    deleteBtn.style.backgroundColor = "red";
+    deleteBtn.style.width = "20px";
+    deleteBtn.style.height = "20px";
+    deleteBtn.style.margin = "10px";
   }
   input.value = "";
 }
