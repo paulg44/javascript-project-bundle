@@ -17,13 +17,44 @@ const hardBtn = document.getElementById("hard");
 const gameContainer = document.querySelector(".game-grid");
 
 // Arrays
-const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
+
+// Timer
+let testScore = 0;
 
 // Functions
 function gameLogic(array) {
+  // Shuffles array randomly
   let randomGenerator = array.sort(() => 0.5 - Math.random());
   console.log(randomGenerator);
+
+  //   Render a div for each item
+  array.forEach((item) => {
+    const square = document.createElement("div");
+    square.innerText = `${item}`;
+    square.style.height = "100px";
+    square.style.width = "100px";
+    square.style.border = "2px solid red";
+    gameContainer.appendChild(square);
+
+    // Make squares clickable
+    let clickedSquares = [];
+    square.addEventListener("click", () => {
+      if (square) {
+        console.log("Square clicked");
+        square.style.backgroundColor =
+          square.style.backgroundColor === "red" ? "white" : "red";
+        let userChoiceNumber = square.textContent;
+        console.log(userChoiceNumber);
+      }
+    });
+
+    // if (userChoiceNumber === userChoiceNumber) {
+    //   testScore++;
+    // }
+  });
 }
+console.log(testScore);
 
 // Event Listeners
 easyBtn.addEventListener("click", () => {
