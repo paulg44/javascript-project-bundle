@@ -86,7 +86,7 @@ let negativeScare = false;
 let positiveScare = false;
 
 // Game Logic
-export function gameLogic(userChoice) {
+function gameLogic(userChoice) {
   // Array of possible choice
   let choices = ["rock", "paper", "scissors"];
 
