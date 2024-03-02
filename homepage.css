@@ -1,5 +1,9 @@
 /* CSS for Homepage */
 /* All projects */
+.homepage {
+  height: auto;
+}
+
 .projects {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -49,4 +53,9 @@
 /* Calculator Project */
 .calculator-project {
   background: radial-gradient(#fff, #333);
+}
+
+/* ToDo Project */
+.todo-project {
+  background: linear-gradient(purple, yellow);
 }

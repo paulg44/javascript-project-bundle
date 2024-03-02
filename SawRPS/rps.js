@@ -38,8 +38,10 @@ function fadeIn(element) {
 
 // Store user input in a variable
 userInput.addEventListener("keypress", function (e) {
+  // FIX THIS, NOT WORKING ON LAPTOP
   if (e.key === "Enter") {
     let inputValue = e.target.value;
+    console.log("enter pressed");
 
     // Show buttons
     paperBtn.style.visibility = "visible";

@@ -39,3 +39,10 @@ ul li {
   align-items: center;
   justify-content: space-between;
 }
+
+.todo-home-link {
+  color: purple;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
