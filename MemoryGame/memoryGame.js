@@ -44,15 +44,14 @@ function gameLogic(array) {
 
   // Make squares clickable
   let clickedSquares = [];
+  let canBeClicked = true;
 
   squares.forEach((square, index) => {
     square.addEventListener("click", () => {
-      if ((clickedSquares.length, 2 && !clickedSquares.includes(squares))) {
+      if (clickedSquares.length < 2 && !clickedSquares.includes(squares)) {
         console.log(`Square at index ${index} clicked`);
         square.style.backgroundColor =
           square.style.backgroundColor === "red" ? "white" : "red";
-        let userChoiceNumber = square.textContent;
-        console.log(userChoiceNumber);
 
         clickedSquares.push(square);
 
@@ -66,6 +65,8 @@ function gameLogic(array) {
             console.log(testScore);
           } else {
             console.log("Values don't match");
+            clickedSquares[0].style.backgroundColor = "white";
+            clickedSquares[1].style.backgroundColor = "white";
           }
 
           clickedSquares = [];
