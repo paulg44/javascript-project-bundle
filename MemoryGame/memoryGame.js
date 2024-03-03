@@ -15,6 +15,7 @@ const easyBtn = document.getElementById("easy");
 const mediumBtn = document.getElementById("medium");
 const hardBtn = document.getElementById("hard");
 const gameContainer = document.querySelector(".game-grid");
+const timer = document.querySelector(".timer");
 
 // Arrays
 const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
@@ -23,6 +24,34 @@ const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 let testScore = 0;
 
 // Functions
+let time = 0;
+let interval;
+function startTimer() {
+  if (interval) {
+    clearInterval(interval);
+  }
+  interval = setInterval(() => {
+    time += 1;
+    timer.innerHTML =
+      Math.floor(time / 3600)
+        .toString()
+        .padStart(2, "0") +
+      ":" +
+      Math.floor((time % 3600) / 60)
+        .toString()
+        .padStart(2, "0") +
+      ":" +
+      Math.floor(time % 60)
+        .toString()
+        .padStart(2, "0");
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(interval);
+  interval = null;
+}
+
 function gameLogic(array) {
   // Shuffles array randomly
   let randomGenerator = array.sort(() => 0.5 - Math.random());
@@ -44,7 +73,6 @@ function gameLogic(array) {
 
   // Make squares clickable
   let clickedSquares = [];
-  let canBeClicked = true;
 
   squares.forEach((square, index) => {
     square.addEventListener("click", () => {
@@ -70,6 +98,11 @@ function gameLogic(array) {
           }
 
           clickedSquares = [];
+
+          if (array.length / 2 === testScore) {
+            // Stop timer
+            stopTimer();
+          }
         }
       }
     });
@@ -79,5 +112,6 @@ function gameLogic(array) {
 // Event Listeners
 easyBtn.addEventListener("click", () => {
   console.log("Easy btn clicked");
+  startTimer();
   gameLogic(easy);
 });
