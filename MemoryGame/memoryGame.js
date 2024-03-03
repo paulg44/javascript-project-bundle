@@ -20,31 +20,33 @@ const timer = document.querySelector(".timer");
 // Arrays
 const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 
-// Timer
+// Global Variables
+let scores = [];
 let testScore = 0;
-
-// Functions
 let time = 0;
 let interval;
+
+// Functions
 function startTimer() {
   if (interval) {
     clearInterval(interval);
   }
   interval = setInterval(() => {
-    time += 1;
-    timer.innerHTML =
-      Math.floor(time / 3600)
-        .toString()
-        .padStart(2, "0") +
-      ":" +
-      Math.floor((time % 3600) / 60)
-        .toString()
-        .padStart(2, "0") +
-      ":" +
-      Math.floor(time % 60)
-        .toString()
-        .padStart(2, "0");
-  }, 1000);
+    time += 10;
+    updateTimerDisplay();
+  }, 10);
+}
+
+function updateTimerDisplay() {
+  const minutes = Math.floor(time / 60000);
+  const seconds = Math.floor((time % 60000) / 1000);
+  const milliseconds = Math.floor(time % 1000);
+  timer.innerHTML =
+    minutes.toString().padStart(2, "0") +
+    ":" +
+    seconds.toString().padStart(2, "0") +
+    ":" +
+    milliseconds.toString().padStart(3, "0");
 }
 
 function stopTimer() {
@@ -102,11 +104,14 @@ function gameLogic(array) {
           if (array.length / 2 === testScore) {
             // Stop timer
             stopTimer();
+            console.log(time);
+            scores.push(time);
           }
         }
       }
     });
   });
+  console.log(scores);
 }
 
 // Event Listeners
