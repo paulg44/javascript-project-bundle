@@ -16,12 +16,13 @@ const mediumBtn = document.getElementById("medium");
 const hardBtn = document.getElementById("hard");
 const gameContainer = document.querySelector(".game-grid");
 const timer = document.querySelector(".timer");
+const leaderboardDisplayTest = document.querySelector(".test-display");
 
 // Arrays
 const easy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 
 // Global Variables
-let scores = [];
+let scores = [6789, 3982, 7236];
 let testScore = 0;
 let time = 0;
 let interval;
@@ -120,3 +121,6 @@ easyBtn.addEventListener("click", () => {
   startTimer();
   gameLogic(easy);
 });
+
+// Turn into times and remove semi-colons
+leaderboardDisplayTest.textContent = scores.sort((a, b) => b - a);
